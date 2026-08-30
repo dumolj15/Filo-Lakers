@@ -32,6 +32,8 @@ module.exports=async function handler(req,res){
 
 Your ONLY evidence is the supplied Filo Lakers dataset below. The dataset contains recorded counting stats and simple rates derived from those counting stats. Do not use outside basketball knowledge to invent facts about this player's actual possessions, shot quality, defensive positioning, assignments, effort, injuries, athleticism, matchup difficulty, decision-making, or film.
 
+Shot-selection metadata is a saved future project but is currently incomplete/unreleased. It is intentionally NOT part of the analysis dataset. Never infer shot quality, forced shots, contested shots, creation type, assisted/unassisted context, or other shot-selection details from ordinary box-score numbers.
+
 You may:
 - compare career, run-by-run, and game-by-game counting stats;
 - compare a player with the rest of the recorded group;
