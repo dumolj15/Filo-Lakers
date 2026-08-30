@@ -2,6 +2,7 @@ const D=window.FILO_DATA;
 const P=Object.keys(D.players);
 Object.entries(window.FILO_DETAILS||{}).forEach(([p,x])=>{if(D.players[p])Object.assign(D.players[p],x)});
 D.games=window.FILO_GAMES||[];
+D.boxscores=window.FILO_BOXSCORES||{};
 D.physicals=window.FILO_PHYSICALS||{};
 function combinations(arr,k){const out=[];function rec(start,cur){if(cur.length===k){out.push([...cur]);return}for(let i=start;i<arr.length;i++)rec(i+1,[...cur,arr[i]])}rec(0,[]);return out}
 function buildChemistry(){
@@ -19,7 +20,7 @@ function buildChemistry(){
 }
 let CHEM=null;
 const app=document.getElementById('app');
-let tab='home',leaderSort={totals:{key:'pts',dir:-1},rates:{key:'ppg',dir:-1}},openRun=null,openGamesRun=null;
+let tab='home',leaderSort={totals:{key:'pts',dir:-1},rates:{key:'ppg',dir:-1}},openRun=null,openGamesRun=null,openGameKey=null;
 const pct=x=>x==null?'—':(x*100).toFixed(1)+'%';
 const n=(x,d=2)=>Number(x??0).toFixed(d);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
