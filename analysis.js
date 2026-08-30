@@ -28,7 +28,8 @@ function buildAnalysisStats(p){
     run_by_run:runByRun,
     game_by_game:gameByGame,
     league_career:P.map(name=>({name,...analysisStatPick(D.players[name])})),
-    scope:'Recorded counting stats and simple rates derived from those counting stats only.'
+    scope:'Recorded counting stats and simple rates derived from those counting stats only.',
+    unavailable_data:['Shot-selection metadata is saved as a future project but is incomplete/unreleased and must not be used or inferred.']
   };
 }
 
@@ -42,7 +43,7 @@ function analysis(){
   return `<section class="hero analysis-hero"><div class="eye">Experimental feature</div><h1>AI Analysis <span class="analysis-wip">Work in Progress</span></h1><p>Have a conversation about your Filo Lakers numbers and look for useful statistical patterns, strengths, trends and areas to explore.</p></section>
   <div class="analysis-warning card"><div class="analysis-warning-icon">!</div><div><h3>Stats only — not film analysis</h3><p>This assistant only sees recorded counting stats and simple rates calculated from them. It cannot see film, shot quality, defensive assignments, positioning, effort, injuries, matchup difficulty, decision-making or anything else we did not record.</p><p><b>Interpret its advice as statistical evidence, not a complete evaluation of your basketball game.</b></p></div></div>
   <div class="analysis-layout">
-    <aside class="card analysis-guide"><div class="kicker">What it can do</div><h3>Good questions to ask</h3><div class="analysis-examples"><span>How has my production changed recently?</span><span>What are my strongest stats relative to the group?</span><span>Where do my numbers suggest room to improve?</span><span>How does my profile compare with another player?</span><span>What changed between two runs?</span><span>Give me three statistical focuses for next run.</span></div><div class="analysis-limit"><b>What it cannot know</b><p>It cannot decide whether a shot was good or bad, whether a defensive rotation was correct, or why a play happened unless the recorded numbers directly support that conclusion.</p></div></aside>
+    <aside class="card analysis-guide"><div class="kicker">What it can do</div><h3>Good questions to ask</h3><div class="analysis-examples"><span>How has my production changed recently?</span><span>What are my strongest stats relative to the group?</span><span>Where do my numbers suggest room to improve?</span><span>How does my profile compare with another player?</span><span>What changed between two runs?</span><span>Give me three statistical focuses for next run.</span></div><div class="analysis-limit"><b>What it cannot know</b><p>It cannot decide whether a shot was good or bad, whether a defensive rotation was correct, or why a play happened unless the recorded numbers directly support that conclusion.</p></div><div class="analysis-limit"><b>Planned data</b><p><strong>Shot-selection metadata</strong> is a saved future project. Some of it exists, but coverage is incomplete and tedious to backfill, so those fields are intentionally treated as unreleased/blank for now and are not used by this AI.</p></div></aside>
     <section class="card analysis-chat-card">
       <div class="analysis-chat-head"><div><div class="kicker">Ask Filo AI</div><h3>Statistical player analysis</h3></div><div class="analysis-player-select"><label for="analysisPlayer">Analyze</label><select id="analysisPlayer">${options}</select></div></div>
       <div class="analysis-session-note"><span>Session-only chat</span> This conversation clears when you leave the Analysis tab.</div>
