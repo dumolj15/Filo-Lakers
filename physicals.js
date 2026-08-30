@@ -1,0 +1,14 @@
+window.FILO_PHYSICALS={
+  Justin:{height:'',wingspan:''},
+  Ljah:{height:'',wingspan:''},
+  Daniel:{height:'',wingspan:''},
+  KT:{height:'',wingspan:''},
+  Riley:{height:'',wingspan:''},
+  Teo:{height:'',wingspan:''},
+  David:{height:'',wingspan:''},
+  Eli:{height:'',wingspan:''},
+  Jarred:{height:'',wingspan:''},
+  Tristan:{height:'',wingspan:''},
+  Brandon:{height:'',wingspan:''},
+  Xavier:{height:'',wingspan:''}
+};
