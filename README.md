@@ -1,7 +1,5 @@
 # Filo Lakers
 
-Private pickup basketball league website with career stats, leaderboards, player profiles, and run history.
+Pickup basketball treated like a league.
 
-Current data: Runs 1–9, through August 26, 2026.
-
-The website entry point is `index.html` and is designed to deploy as a static site on Vercel.
+The site tracks career stats, run history, scouting roles, player comparisons, role-fit chemistry, lineup construction, and records through the latest recorded run.
